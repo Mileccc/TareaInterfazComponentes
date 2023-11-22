@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="rootAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tarea2.interfaz.controlador.componentesController">
+  <children>
+    <!-- Barra de título personalizada con botones de minimizar, maximizar y cerrar -->
+    <HBox fx:id="titleBar" alignment="CENTER_LEFT" styleClass="title-bar" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+      <Label fx:id="titleLabel" styleClass="title-label" text="Mi primer proyecto JavaFX" />
+      <Pane HBox.hgrow="ALWAYS" /> <!-- Espaciador para alinear botones a la derecha -->
+      <Button fx:id="minimizeButton" onAction="#minimizeWindow" text="_" />
+      <Button fx:id="maximizeButton" onAction="#maximizeWindow" text="[]" />
+      <Button fx:id="closeButton" onAction="#closeWindow" text="X" />
+    </HBox>
+
+    <!-- Campo de texto para ingresar nombre y apellido -->
+    <TextField fx:id="usernameInput" layoutX="150.0" layoutY="88.0" prefHeight="26.0" prefWidth="177.0" promptText="Introduce nombre y primer apellido" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="120.0" />
+    
+    <!-- Botón para saludar al usuario ingresado -->
+    <Button fx:id="greetButton" layoutX="355.0" layoutY="93.0" mnemonicParsing="false" onAction="#cambiarLabel" text="Saludar" AnchorPane.leftAnchor="355.0" AnchorPane.topAnchor="120.0" />
+    
+    <!-- Etiqueta para mostrar saludo -->
+    <Label fx:id="greetingLabel" layoutX="47.0" layoutY="54.0" prefHeight="35.0" prefWidth="417.0" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="54.0" />
+    
+    <!-- Tabla para mostrar lista de usuarios -->
+    <TableView fx:id="TableViewdeListas" layoutX="136.0" layoutY="242.0" prefHeight="196.0" prefWidth="149.0" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="272.0">
+      <columns>
+        <TableColumn fx:id="firstNameColumn" prefWidth="112.80005645751953" text="Nombre" />
+        <TableColumn fx:id="lastNameColumn" prefWidth="126.4000244140625" text="Apellido" />
+      </columns>
+    </TableView>
+
+    <!-- Botones para agregar y eliminar usuarios -->
+    <Button fx:id="addUserButton" layoutX="150.0" layoutY="164.0" mnemonicParsing="false" onAction="#agregarNombre" text="Agregar" AnchorPane.leftAnchor="136.0" AnchorPane.topAnchor="193.0" />
+    <Button fx:id="deleteUserButton" layoutX="265.0" layoutY="163.0" mnemonicParsing="false" onAction="#eliminarNombre" text="Eliminar" AnchorPane.rightAnchor="136.0" AnchorPane.topAnchor="193.0" />
+    
+    <!-- Etiqueta para el campo de texto Nombre y Apellido -->
+    <Label fx:id="nombreApellidoLabel" layoutX="26.0" layoutY="92.0" prefHeight="18.0" prefWidth="124.0" text="Nombre y Apellido:" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="120.0" />
+  </children>
+</AnchorPane>
+

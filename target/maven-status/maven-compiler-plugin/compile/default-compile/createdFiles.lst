@@ -1,0 +1,4 @@
+module-info.class
+com\tarea2\interfaz\application\Main.class
+com\tarea2\interfaz\controlador\componentesController.class
+com\tarea2\interfaz\modelo\User.class

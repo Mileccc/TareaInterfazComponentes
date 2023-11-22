@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <!-- Configuración básica del proyecto Maven -->
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.tarea2.interfaz</groupId> <!-- Identificador del grupo del proyecto -->
+    <artifactId>interfaz</artifactId> <!-- Nombre del artefacto (proyecto) -->
+    <version>1.0</version> <!-- Versión del proyecto -->
+
+    <!-- Propiedades del proyecto, incluyendo codificación y versiones del compilador -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- Codificación de caracteres -->
+        <maven.compiler.source>21</maven.compiler.source> <!-- Versión de origen del compilador Java -->
+        <maven.compiler.target>21</maven.compiler.target> <!-- Versión objetivo del compilador Java -->
+    </properties>
+
+    <!-- Dependencias del proyecto -->
+    <dependencies>
+        <!-- Dependencia para los controles de JavaFX -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>20.0.1</version>
+        </dependency>
+        <!-- Dependencia para trabajar con FXML en JavaFX -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>20.0.1</version>
+        </dependency>
+    </dependencies>
+
+    <!-- Configuración de construcción, incluyendo plugins -->
+    <build>
+        <plugins>
+            <!-- Plugin del compilador de Maven -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <release>21</release> <!-- Especifica la versión de Java para la compilación -->
+                </configuration>
+            </plugin>
+            <!-- Plugin para facilitar la ejecución y compilación de aplicaciones JavaFX -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.6</version>
+                <executions>
+                    <execution>
+                        <id>default-cli</id>
+                        <configuration>
+                            <mainClass>com.tarea2.interfaz</mainClass> <!-- Clase principal para ejecución -->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

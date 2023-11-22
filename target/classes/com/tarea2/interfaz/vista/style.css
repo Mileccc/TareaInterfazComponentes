@@ -1,0 +1,96 @@
+/* Estilo para el panel principal: redondea las esquinas y establece un color de fondo oscuro. */
+#rootAnchorPane {
+    -fx-background-radius: 10;
+    -fx-background-color: #0c021b;
+}
+
+/* Estilos para las tablas: define el gradiente de fondo, color de borde y redondeo. */
+.table-view {
+    -fx-background-color: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    -fx-border-color: #1f1f1f;
+    -fx-border-radius: 5;
+    -fx-table-cell-border-color: transparent;
+}
+
+/* Estilos para las cabeceras de las columnas: establece el color del texto, peso de la fuente y gradiente de fondo. */
+.table-view .column-header-background .label {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(to top, #232526, #414345);
+    -fx-border-radius: 5;
+}
+
+/* Estilos para las celdas de las filas: define el gradiente de fondo y el espaciado interno. */
+.table-view .table-row-cell {
+    -fx-background-color: linear-gradient(to top, #232526, #414345);
+    -fx-border-color: transparent;
+    -fx-padding: 5px;
+}
+
+/* Estilo para las celdas llenas: cambia el gradiente de fondo. */
+.table-view .table-row-cell:filled {
+    -fx-background-color: linear-gradient(to top, #2e383d, #4a545f);
+}
+
+/* Estilo para las celdas seleccionadas: establece el color de fondo y texto. */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #4c5b6d;
+    -fx-text-fill: white;
+}
+
+/* Estilo para las celdas de la tabla: define el color de texto y borde. */
+.table-view .table-cell {
+    -fx-border-color: transparent;
+    -fx-text-fill: #14fe2b;
+}
+
+/* Estilo para el placeholder de la tabla vacía: establece el color de texto y tamaño de fuente. */
+.tabla-vacia-placeholder {
+    -fx-text-fill: #14fe2b;
+    -fx-font-size: 16px;
+}
+
+/* Estilos para la etiqueta de saludo: configura el color y tamaño de la fuente. */
+#greetingLabel {
+    -fx-text-fill: #fe14e7;
+    -fx-font-size: 25px;
+}
+
+/* Estilos para la etiqueta de nombre y apellido: define el color y peso del texto. */
+#nombreApellidoLabel {
+    -fx-text-fill: #14fe2b;
+    -fx-font-weight: bold;
+}
+
+/* Estilos generales para los botones: incluye gradientes de fondo, color de texto y bordes. */
+.button {
+    -fx-background-color: linear-gradient(#4e4e4e, #313131);
+    -fx-text-fill: white;
+    -fx-border-color: #282828;
+    -fx-border-radius: 5px;
+}
+
+/* Estilo para botones al pasar el ratón: cambia el gradiente de fondo. */
+.button:hover {
+    -fx-background-color: linear-gradient(#5e5e5e, #414141);
+}
+
+/* Estilo para botones al ser presionados: altera el gradiente de fondo y el color de texto. */
+.button:pressed {
+    -fx-background-color: linear-gradient(#282828, #1e1e1e);
+    -fx-text-fill: #f0f0f0;
+}
+
+/* Estilos para la barra de título: configura el color de fondo, espaciado y alineación. */
+.title-bar {
+    -fx-background-color: #333;
+    -fx-padding: 5px;
+    -fx-alignment: center_left;
+    -fx-background-radius: 10 10 0 0;
+}
+
+/* Estilos para la etiqueta del título: establece el color y tamaño de la fuente. */
+.title-label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
